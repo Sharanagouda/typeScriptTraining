@@ -1,2 +1,3 @@
-const name : string = "sharanu";
+export {};
+const name: string = "sharanu";
 console.log(name);

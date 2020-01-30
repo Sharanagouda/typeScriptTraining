@@ -1,12 +1,18 @@
-var Person = /** @class */ (function () {
-    function Person(count, name) {
+var Counter = /** @class */ (function () {
+    function Counter(count) {
         this.count = count;
-        this.name = name;
     }
-    Person.prototype.displayName = function () {
-        console.log(this.name + " Employee Code " + this.count);
+    Counter.prototype.increment = function () {
+        return ++this.count;
+        // console.log(` Count ${this.count}`);
     };
-    return Person;
+    Counter.prototype.decrement = function () {
+        return --this.count;
+        //console.log(` Count ${this.count}`);
+    };
+    return Counter;
 }());
-var emp = new Person(1, "sharan");
-console.log(emp.displayName);
+var countIncrement = new Counter(3);
+console.log(countIncrement.increment());
+var coundDecrement = new Counter(2);
+console.log(coundDecrement.decrement());
